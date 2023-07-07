@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "corise-articles-data",
+  "private_key_id": "4661661be4e1fc12ca7b69a48042431e75e80c26",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCypvOq7hysj2f9\na/mQFYpIqmCzlqA2Lp9Y1QnWzG68jTCVtWxPAxdQxoT+FKTnyMk/anGOBIjMf02e\nh5bJI7xwVRJIBotSP/bNDQZUGjptSf8PqsvOfsRIkOZ4KLozkCwQMUoPAopyU7sG\nDvNpe7xACA3CSJwfnBBVSzmT8QMJjEScd1xPY7p3hNzQFRyyH/q2zZ1P+k7YFDXY\nueuSw9LwJBUnjf++Tj9u2o0tZZDRRzd1OoSvRUd3n5A1tvthxwTVMNZFDX+GynLS\nEdTV63Yk2WvuJXJ7fQUUnuNdRFfXSFzCS/ZC0/dUY/FCt8+KzRGskaDYYC56RfhX\nxnELLhvJAgMBAAECggEAGfLT65zgP1QpB48aVYo7ZqiQmSUkqhoFfRKcdj2FTA+5\n4dTTIXrSdSIQiRMYjK4GRRbB3Z3c/M70yDTretWc9jf1Cs8gh1bREyF0LN0OZXdc\n+7qUFa8l9WBOiV9pBDpJnCR8nEeDMm3k+VFMm6KkSiyhSvne61xwpuLhPxK/nTAr\nVVxmQS5TASEJZ0AH7dKk2hRXNfeflGgoFiRcUyosnyYIcf/GRgTvyQln/242dzzO\nGNksDptfD7PUrqcxw078o5UUyCp2MlSbR0lVQfbzAUKcaYKeIKU4JUtDxzslN2Gm\nJFLMkpdbVxxc+ZlyZfvv/+uhRwe4/MfUBtVgPDKwLQKBgQDbqsTffd/bPx5wqIBb\nUOR1EHKgO2OuhgxCKGvimswF2KkAg5hterCTkbu7gFMdB/UFErevEYwR9mLxPfYF\n4NrYu6ledjLvqXDwA6IdRfqNhoT/mzbOyLvxCwOHTECeY9IReeK2YL6LTCN+4MvE\n1jbhmdjpCW/eJcIdYFrEx3tU/wKBgQDQM4NTmhJnJ7mXCssTWvpQWqv1FbILAac6\ntORAAXKvBBmMbHHrgKifTh8/mDJueeyHs1iPbgeV+FnzlsB9mTbUi7oSaZ6pBAcl\nfREeIFqgzpZSO+IyjMVp6/xqqAYo4kRrVzsoICftN2d3kvAMjKrlcn/i9G2qD3v0\nLMRCLkQnNwKBgQCk/TaxxpGE03vBkk4WSEPPyXLO9syAIR7D8ihWI35qRblqMW0j\njatiq2seAdxrSba3AMAGNl/GfhECsU9ASwsVDp6/3HeVmubA33m8EvuFoSvz8FjS\nJ+NBwMv9q0A9tyvpBGtMII39gkqG2cEzLtI50JwjLHthl2qdNen3Mv1ncQKBgQCm\nIvUAmUlmF0T5ShuSbl6gEDp3b8CLF96h8gbRLFafYd4hN8gP7LKhrG0zCff0QEaG\nYo6gpWRYP71Hq1we3UvrfzQTzURWCmjJeWtXZunqt+8r3604OSyuwSjC0yFXLnb6\nULlb44z4teVSfWYgHX+haCS0red0dLasuaxCQzkPMQKBgFNscyDacJliPx314JjY\ndo+qkDaKte6eTm/T9eF9y+PLHRmJKIhL0HhzY2+gZqJ9aOb7UOfyNLQ6j0IpgkbR\n4qdm0zykj7y5brWb7PRjYCnZcISOj4KvW6JDnwRZuGigN/oC0xYKYE0WaIIufFQc\npHgZlKmSGB6E8wtKBVK3JeoT\n-----END PRIVATE KEY-----\n",
+  "client_email": "corise-articles-data@corise-articles-data.iam.gserviceaccount.com",
+  "client_id": "105694567656223170677",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/corise-articles-data%40corise-articles-data.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
