@@ -14,13 +14,12 @@ app = FastAPI(
     version="0.0.1"
 )
 
-# Only for scope of this project, we are allowing all origins
+# We're allowing all origins for now. This is not the best practice. We should allow only the frontend origin.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST"]
 )
 
 # Heartbeat API -> Returns a simple message to check if the API is up and running
