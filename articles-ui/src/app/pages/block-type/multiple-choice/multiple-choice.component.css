@@ -1,0 +1,14 @@
+[nz-radio] {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+}
+input {
+  width: 100px;
+  margin-left: 10px;
+}
+
+nz-card {
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px lightblue;
+}

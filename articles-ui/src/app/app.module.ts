@@ -13,8 +13,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzCardModule } from 'ng-zorro-antd/card';
+
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { ArticleComponent } from './pages/article/article.component';
+import { BlockComponent } from './pages/block/block.component';
+
+import { MarkdownModule } from 'ngx-markdown';
+import { MultipleChoiceComponent } from './pages/block-type/multiple-choice/multiple-choice.component';
+import { MarkdownComponent } from './pages/block-type/markdown/markdown.component';
 
 registerLocaleData(en);
 
@@ -22,7 +30,10 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     WelcomeComponent,
-    ArticleComponent
+    ArticleComponent,
+    BlockComponent,
+    MultipleChoiceComponent,
+    MarkdownComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +43,10 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzRadioModule,
+    NzCardModule,
+    MarkdownModule.forRoot()
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

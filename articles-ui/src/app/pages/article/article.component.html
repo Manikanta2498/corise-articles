@@ -1,6 +1,6 @@
 <div>
-  <p *ngFor="let item of blocksData">
-    {{item}}
-    <br/>
-  </p>
+  <div *ngFor="let item of blocksData">
+    <app-block [blockData]="item"></app-block>
+    <br>
+  </div>
 </div>

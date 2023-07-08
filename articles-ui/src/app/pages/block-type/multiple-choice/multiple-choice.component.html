@@ -1,0 +1,18 @@
+<nz-card nzTitle="Quick Quiz">
+  <div id="quiz">
+    <div id="question">
+        <h2>{{question}}</h2>
+    </div>
+    <div id="choices">
+        <nz-radio-group [(ngModel)]="optionSelected">
+          <label *ngFor="let option of options"
+                nz-radio
+                nzValue="{{option}}"
+                (ngModelChange)="onOptionChange($event)"
+                >
+            {{option}}
+          </label>
+        </nz-radio-group>
+    </div>
+  </div>
+</nz-card>

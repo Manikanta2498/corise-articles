@@ -6,11 +6,20 @@
 }
 
 .app-layout {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+nz-sider {
+  overflow: auto;
+  height: 100%;
+  position: fixed;
+  left: 0;
 }
 
 .menu-sidebar {
-  position: relative;
+  position: fixed;
+  overflow: auto;
+  left: 0;
   z-index: 10;
   min-height: 100vh;
   box-shadow: 2px 0 6px rgba(0,21,41,.35);
@@ -70,7 +79,8 @@ nz-header {
 }
 
 nz-content {
-  margin: 24px;
+  margin: 24px 16px 0;
+  overflow: initial;
 }
 
 .inner-content {
@@ -82,3 +92,7 @@ nz-content {
 a:active {
   color: yellow;
  }
+
+ .right-layout {
+  margin-left: 256px;
+}

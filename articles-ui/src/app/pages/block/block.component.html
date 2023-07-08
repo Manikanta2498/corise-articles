@@ -1,0 +1,6 @@
+<div *ngIf="blockData.Type === 'Markdown'" >
+    <app-markdown [blockData]="blockData"></app-markdown>
+</div>
+<div *ngIf="blockData.Type === 'MCQ'" >
+  <app-multiple-choice [blockData]="blockData"></app-multiple-choice>
+</div>
