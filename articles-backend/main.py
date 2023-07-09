@@ -63,34 +63,3 @@ async def create_article(title: str, content_blocks: str):
     })
     datastore_client.put(article)
     return {"message": "Article created successfully", "ID": article.key.id}
-
-# Get Block HTML
-def get_block_html(block: dict):
-    # Get block type
-    block_type = block['Type']
-    # Get block data
-    block_data = block['Object']
-    # Return HTML based on block type
-    if block_type == 'Markdown':
-        return f"<div class='markdown'>{block_data['Text']}</div>"
-    else:
-        return f"<div class='text'>{block_data}</div>"
-    
-# Get Article HTML API -> Returns HTML for a given article ID
-@app.get("/articles/{article_id}/html")
-async def get_article_html(article_id: int):
-    key = datastore_client.key('Articles', article_id)
-    article = datastore_client.get(key)
-    if article is None:
-        return {"message": "Article not found"}
-    else:
-        # Get article blocks
-        article_blocks = article['Blocks']
-        # Convert blocks to JSON
-        article_blocks = eval(article_blocks)
-        # Convert blocks to HTML
-        article_html = ""
-        for block in article_blocks:
-            article_html += get_block_html(block)
-            article_html += "<br>"
-        return {"HTML": article_html}
