@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NzButtonSize } from 'ng-zorro-antd/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -8,7 +8,12 @@ import { NzButtonSize } from 'ng-zorro-antd/button';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  createArticle(): void {
+    // Redirect to create article page
+    this.router.navigate(['/create-new-article']);
+  }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,49 @@
+<div nz-row>
+  <div nz-col nzSpan="18">
+    <div>
+      <h2>Create your Article here:</h2><br>
+      <form nz-form [formGroup]="validateForm" class="create-article-form" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="articleTitle"><i>Article Title</i></nz-form-label>
+          <nz-form-control [nzSm]="18" [nzXs]="24" nzErrorTip="Please enter an article title!">
+            <nz-input-group>
+              <input type="text" nz-input
+                formControlName="articleTitle"
+                placeholder="Enter Article Title" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="articleContent" nzRequired><i>Article Content</i></nz-form-label>
+          <nz-form-control [nzSm]="18" [nzXs]="24" nzErrorTip="Please enter your aticle content!">
+            <textarea formControlName="articleContent"
+                      nz-input rows="15"
+                      [ngModel]="sampleArticle"
+                      placeholder="write any thing"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+        <button nz-button class="submit-article-button" [nzType]="'primary'">Create Article</button>
+      </form>
+    </div>
+  </div>
+  <div nz-col nzSpan="6">
+    <div>
+      <div nz-row>
+        <button nz-button
+              nzType="primary"
+              (click)="showInstructionsModal()">
+              <i nz-icon nzType="question"></i>
+              Instructions
+        </button><br>
+      </div>
+      <div nz-row *ngFor="let format of copyToClipboardFormats" class="copyToClipboardButton">
+        <button nz-button
+            nzType="primary"
+            [cdkCopyToClipboard]="format.format"
+            (cdkCopyToClipboardCopied)="onClipboardCopy(format.copyAlert)">
+          {{format.buttonLabel}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

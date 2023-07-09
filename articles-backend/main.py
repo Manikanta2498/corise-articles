@@ -1,5 +1,5 @@
 import datetime
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from google.cloud import datastore
 
@@ -53,12 +53,14 @@ async def get_article_by_id(article_id: int):
     
 # Create Article API -> Creates a new article with the given data
 @app.post("/articles")
-async def create_article(title: str, content_blocks: str):
+async def create_article(request: Request):
+    request_body = await request.json()
+    print(request_body)
     key = datastore_client.key('Articles')
     article = datastore.Entity(key=key)
     article.update({
-        "Title": title,
-        "Blocks": content_blocks,
+        "Title": request_body['title'],
+        "Blocks": request_body['content_blocks'],
         "CreatedAt": datetime.datetime.now()
     })
     datastore_client.put(article)

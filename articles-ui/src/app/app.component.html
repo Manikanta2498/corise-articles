@@ -6,8 +6,15 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-menu-item nzMatchRouter>
-        <a routerLink="/welcome">Welcome</a>
+      <li nz-submenu nzOpen nzTitle="Home" nzIcon="home">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/welcome">Welcome</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/create-new-article">Create New Article</a>
+          </li>
+        </ul>
       </li>
       <li nz-submenu nzOpen nzTitle="Articles" nzIcon="form">
         <ul>

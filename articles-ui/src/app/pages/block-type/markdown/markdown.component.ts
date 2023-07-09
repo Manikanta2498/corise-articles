@@ -13,7 +13,9 @@ export class MarkdownComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('In Markdown component')
     this.blockContent = this.blockData.Object.Text;
+    console.log('blockContent: ' + this.blockContent);
   }
 
 }

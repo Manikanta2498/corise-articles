@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleService } from './article.service';
+import { window } from 'rxjs';
 
 @Component({
   selector: 'app-article',
@@ -24,8 +25,8 @@ export class ArticleComponent implements OnInit {
   updateArticle(): void {
     this.articleService.getArticle(this.articleId).subscribe({
       next: data => {
-        this.articleData = JSON.parse(JSON.stringify(data));
         this.blocksData = JSON.parse(data.Blocks);
+        console.log('blocksData: ' + this.blocksData);
       }
     });
   }
