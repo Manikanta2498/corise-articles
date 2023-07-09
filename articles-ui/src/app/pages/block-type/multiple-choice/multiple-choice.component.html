@@ -1,18 +1,18 @@
 <nz-card nzTitle="Quick Quiz">
-  <div id="quiz">
+  <form nz-form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
     <div id="question">
-        <h2>{{question}}</h2>
+      <h2>{{question}}</h2>
     </div>
-    <div id="choices">
-        <nz-radio-group [(ngModel)]="optionSelected">
-          <label *ngFor="let option of options"
-                nz-radio
-                nzValue="{{option}}"
-                (ngModelChange)="onOptionChange($event)"
-                >
-            {{option}}
-          </label>
-        </nz-radio-group>
-    </div>
-  </div>
+    <nz-form-item>
+      <nz-radio-group formControlName="choice">
+        <label *ngFor="let option of options"
+              nz-radio
+              nzValue="{{option}}"
+              >
+          {{option}}
+        </label>
+      </nz-radio-group>
+    </nz-form-item>
+    <button nz-button class="submitButton" [nzType]="'primary'">Check Answer</button>
+  </form>
 </nz-card>

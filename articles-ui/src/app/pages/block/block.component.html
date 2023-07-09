@@ -4,3 +4,6 @@
 <div *ngIf="blockData.Type === 'MCQ'" >
   <app-multiple-choice [blockData]="blockData"></app-multiple-choice>
 </div>
+<div *ngIf="blockData.Type === 'FlashCard'" >
+  <app-flashcard [blockData]="blockData"></app-flashcard>
+</div>

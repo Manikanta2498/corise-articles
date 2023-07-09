@@ -24,14 +24,8 @@ export class ArticleComponent implements OnInit {
   updateArticle(): void {
     this.articleService.getArticle(this.articleId).subscribe({
       next: data => {
-        console.log(data);
-        console.log('------------------------------------------------------------');
         this.articleData = JSON.parse(JSON.stringify(data));
-        console.log(this.articleData);
-        console.log('------------------------------------------------------------');
         this.blocksData = JSON.parse(data.Blocks);
-        console.log(this.blocksData);
-        console.log('------------------------------------------------------------');
       }
     });
   }
