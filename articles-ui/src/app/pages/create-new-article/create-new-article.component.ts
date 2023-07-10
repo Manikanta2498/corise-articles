@@ -95,8 +95,11 @@ export class CreateNewArticleComponent implements OnInit {
           'Hurray!',
           'Article with title "' + this.articleTitle + '" created successfully.'
         );
-        // Refresh the web page.
-        window.location.reload();
+        setTimeout(() => {
+          // Refresh the web page.
+          window.location.reload();
+        }, 2000);
+
       }
     );
   }
